@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Интерфейс Buro</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="./css/tachyons.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <!--
+    https://www.buro247.ru/themes/main2018/assets/html/index.html
+  -->
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    hr:after {
+      content: attr(data-text);
+      position: absolute;
+      height: 30px;
+      background: black;
+      width: 200px;
+      color: #fff;
+      text-align: center;
+      margin-top: -0.5rem;
+      line-height: 30px;
+    }
+
+    .sticky {
+      position: sticky
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="ssticky top-0 pv3 w-100 bg-white z-5">
+    <svg width="30px" height="30px" fill="#231F20" class="absolute left-0 ph3 ml1">
+      <use xlink:href="#menu"></use>
+    </svg>
+    <svg width="120px" height="30px" fill="#231F20" class="db center">
+      <use xlink:href="#logo-buro"></use>
+    </svg>
+  </nav>
+  <div class="flex h-100">
+    <aside class="w-20 bg-black-05">
+      <div class="sticky top-0 pa3" style="
+      /* top: 3.875rem */
+    ">
+        <h4 class="f4 ma0 mb3">Компоненты</h4>
+        <div class="components">
+          <a href="#post-cards" class="db pv2">карусель карточек</a>
+          <a href="#stories-slider" class="db pv2">карусель историй</a>
+          <a href="#small-slider" class="db pv2">карусель маленькая</a>
+          <a href="#main-content" class="db pv2">основная сетка анонсов</a>
+          <a href="#section-three" class="db pv2">секция трех анонсов</a>
+          <a href="#section-rects" class="db pv2">секция двух анонсов</a>
+        </div>
+      </div>
+    </aside>
+    <main class="w-80 pa3">
+      <div class="component">
+        <div class="absolute">
+          <hr class="bn b--black -bt-ns sticky top-0" data-text="post-cards">
+        </div>
+        <section id="post-cards" class="pv5 outline">
+          <link rel="stylesheet" href="./css/swiper.min.css">
+          <script src="./js/swiper.min.js"></script>
+          <style>
+            .mw-1000 {
+              max-width: 1000px;
+            }
+
+            .swiper-cards {
+              width: 670px;
+              height: 830px;
+              padding: 0 25px;
+            }
+
+            .swiper-cards--container {
+              border: 3px solid;
+              height: 100%;
+              overflow: hidden;
+            }
+
+            .swiper-cards .swiper-wrapper,
+            .swiper-cards--container,
+            .swiper-cards .swiper-slide {
+              max-height: 780px;
+            }
+
+            .swiper-cards--container .swiper-cards--content {
+              font: 700 27px/27px 'Helvetica', Arial, sans-serif;
+              margin-bottom: 30px;
+              max-width: 490px;
+            }
+
+            .swiper-cards--container .swiper-cards--content+.swiper-cards--content {
+              font: 400 20px/20px 'Helvetica', Arial, sans-serif;
+              max-width: 540px;
+            }
+
+            .swiper-cards .swiper-wrapper {
+              margin-bottom: 10px;
+            }
+
+            .swiper-cards--container img {
+              margin-bottom: 20px;
+            }
+
+            .swiper-cards--pagination {
+              font: 400 16px/19px 'Helvetica', Arial, sans-serif;
+              text-align: left;
+              position: relative;
+              bottom: 0;
+            }
+
+            .swiper-cards--prev,
+            .swiper-cards--next {
+              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 10'%3E%3Ccircle cx='5' cy='5' r='5' fill='black'/%3E%3C/svg%3E");
+              background-size: 10px 10px;
+              transition: transform 1s;
+              width: 25px;
+            }
+
+            .swiper-cards--prev {
+              left: 0;
+            }
+
+            .swiper-cards--next {
+              right: 0;
+            }
+
+            .swiper-cards--prev:hover,
+            .swiper-cards--next:hover {
+              transform: scale(2)
+            }
+          </style>
+          <div class="post-cards">
+            <div class="mw-1000 center">
+              <div class="swiper-container swiper-cards center">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide bg-white">
+                    <div class="swiper-cards--container">
+                      <img options="size=620x310&bgcolor=#ccc&color=#f0f0f0&text=Story 🔥"
+                        class="db center placeholder">
+                      <div class="tc cards-slider--text">
+                        <div class="swiper-cards--content center">
+                          <b>Рассказываем о преимуществах использования специальных пластырей против воспалений?</b>
+                        </div>
+                        <div class="swiper-cards--content center">
+                          Рассказываем 🔥 преимуществах использования специальных пластырей против воспалений.
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.<br><br>
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.<br><br>
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide bg-white">
+                    <div class="swiper-cards--container">
+                      <img options="size=620x310&bgcolor=#ccc&color=#f0f0f0&text=Story 2" class="db center placeholder">
+                      <div class="tc cards-slider--text">
+                        <div class="swiper-cards--content center">
+                          <b>Рассказываем о преимуществах использования специальных пластырей против воспалений?</b>
+                        </div>
+                        <div class="swiper-cards--content center">
+                          Рассказываем 🔥 преимуществах использования специальных пластырей против воспалений.
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.<br><br>
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.<br><br>
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide bg-white">
+                    <div class="swiper-cards--container">
+                      <img options="size=620x310&bgcolor=#ccc&color=#f0f0f0&text=Story 3" class="db center placeholder">
+                      <div class="tc cards-slider--text">
+                        <div class="swiper-cards--content center">
+                          <b>Рассказываем о преимуществах использования специальных пластырей против воспалений?</b>
+                        </div>
+                        <div class="swiper-cards--content center">
+                          Рассказываем 🔥 преимуществах использования специальных пластырей против воспалений.
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.<br><br>
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.<br><br>
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide bg-white">
+                    <div class="swiper-cards--container">
+                      <img options="size=620x310&bgcolor=#ccc&color=#f0f0f0&text=Story 4" class="db center placeholder">
+                      <div class="tc cards-slider--text">
+                        <div class="swiper-cards--content center">
+                          <b>Рассказываем о преимуществах использования специальных пластырей против воспалений?</b>
+                        </div>
+                        <div class="swiper-cards--content center">
+                          Рассказываем 🔥 преимуществах использования специальных пластырей против воспалений.
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.<br><br>
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.<br><br>
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide bg-white">
+                    <div class="swiper-cards--container">
+                      <img options="size=620x310&bgcolor=#ccc&color=#f0f0f0&text=Story 5" class="db center placeholder">
+                      <div class="tc cards-slider--text">
+                        <div class="swiper-cards--content center">
+                          <b>Рассказываем о преимуществах использования специальных пластырей против воспалений?</b>
+                        </div>
+                        <div class="swiper-cards--content center">
+                          Рассказываем 🔥 преимуществах использования специальных пластырей против воспалений.
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.<br><br>
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.<br><br>
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.
+                          Рассказываем о преимуществах использования специальных пластырей против воспалений.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination swiper-cards--pagination"></div>
+                <div class="swiper-button-prev swiper-cards--prev"></div>
+                <div class="swiper-button-next swiper-cards--next"></div>
+              </div>
+              <script>
+                var swiper = new Swiper('.swiper-cards', {
+                  pagination: {
+                    el: '.swiper-cards--pagination',
+                    type: 'fraction',
+                  },
+                  spaceBetween: 50,
+                  navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                  },
+                });
+              </script>
+            </div>
+          </div>
+        </section>
+      </div><!-- component end -->
+      <div class="component">
+        <div class="absolute">
+          <hr class="bn b--black -bt-ns sticky top-0" data-text="stories-slider">
+        </div>
+        <section id="stories-slider" class="pv5 outline">
+          <!-- <link rel="stylesheet" href="./css/swiper.min.css"> -->
+          <!-- <script src="./js/swiper.min.js"></script> -->
+          <style>
+            .bg-23 {
+              background: #232323
+            }
+
+            .mw-1000 {
+              max-width: 1000px;
+            }
+
+            .swiper-stories {
+              width: 100%;
+              height: 100%;
+              padding: 0 45px;
+            }
+
+            .swiper-stories--container {
+              max-width: 910px;
+              padding-bottom: 50px;
+            }
+
+            .swiper-stories--prev,
+            .swiper-stories--next {
+              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 10'%3E%3Ccircle cx='5' cy='5' r='5' fill='%23fff'/%3E%3C/svg%3E");
+              background-size: 10px 10px;
+              transition: transform 1s;
+            }
+
+            .swiper-stories--prev:hover,
+            .swiper-stories--next:hover {
+              transform: scale(2)
+            }
+          </style>
+          <div class="bg-23">
+            <div class="mw-1000 center">
+              <div class="swiper-container swiper-stories center">
+                <h3 class="ttu white">Истории</h3>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-stories--container bg-23 flex justify-between align-center">
+                    <a href="#" class="db">
+                      <img options="size=270x460&bgcolor=#ccc&color=#f0f0f0&text=Story 1" class="db placeholder">
+                    </a>
+                    <a href="#" class="db">
+                      <img options="size=270x460&bgcolor=#ccc&color=#f0f0f0&text=Story 2" class="db placeholder">
+                    </a>
+                    <a href="#" class="db">
+                      <img options="size=270x460&bgcolor=#ccc&color=#f0f0f0&text=Story 3" class="db placeholder">
+                    </a>
+                  </div>
+                  <div class="swiper-slide swiper-stories--container bg-23 flex justify-between align-center">
+                    <a href="#" class="db">
+                      <img options="size=270x460&bgcolor=#ccc&color=#f0f0f0&text=Story 4" class="db placeholder">
+                    </a>
+                    <a href="#" class="db">
+                      <img options="size=270x460&bgcolor=#ccc&color=#f0f0f0&text=Story 5" class="db placeholder">
+                    </a>
+                    <a href="#" class="db">
+                      <img options="size=270x460&bgcolor=#ccc&color=#f0f0f0&text=Story 6" class="db placeholder">
+                    </a>
+                  </div>
+                  <div class="swiper-slide swiper-stories--container bg-23 flex justify-between align-center">
+                    <a href="#" class="db">
+                      <img options="size=270x460&bgcolor=#ccc&color=#f0f0f0&text=Story 7" class="db placeholder">
+                    </a>
+                    <a href="#" class="db">
+                      <img options="size=270x460&bgcolor=#ccc&color=#f0f0f0&text=Story 8" class="db placeholder">
+                    </a>
+                    <a href="#" class="db">
+                      <img options="size=270x460&bgcolor=#ccc&color=#f0f0f0&text=Story 9" class="db placeholder">
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-button-prev swiper-stories--prev"></div>
+                <div class="swiper-button-next swiper-stories--next"></div>
+              </div>
+              <script>
+                var swiper = new Swiper('.swiper-stories', {
+                  loop: true,
+                  spaceBetween: 50,
+                  navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                  },
+                });
+              </script>
+            </div>
+          </div>
+        </section>
+      </div><!-- component end -->
+      <div class="component">
+        <div class="absolute">
+          <hr class="bn b--black -bt-ns sticky top-0" data-text="small-slider">
+        </div>
+        <section id="small-slider" class="pv5 outline">
+          <!-- <link rel="stylesheet" href="./css/swiper.min.css"> -->
+          <!-- <script src="./js/swiper.min.js"></script> -->
+          <style>
+            .mw-438 {
+              max-width: 438px;
+            }
+
+            .mb-10 {
+              margin-bottom: 10px
+            }
+
+            .swiper-small {
+              width: 100%;
+              height: 100%;
+              padding: 0 19px;
+            }
+
+            .swiper-small--container {
+              max-width: 410px;
+            }
+
+            .swiper-small-prev,
+            .swiper-small-next {
+              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 10'%3E%3Ccircle cx='5' cy='5' r='5' fill='black'/%3E%3C/svg%3E");
+              background-size: 10px;
+              transition: transform 1s;
+              width: 30px;
+              height: 50px;
+              top: 65px;
+            }
+
+            .swiper-small-prev {
+              left: -5px;
+            }
+
+            .swiper-small-next {
+              right: -5px;
+            }
+
+            .swiper-small-prev:hover,
+            .swiper-small-next:hover {
+              transform: scale(1.8)
+            }
+          </style>
+          <div class="mw-438 center">
+            <h3 class="mt0 ttu">Special offers</h3>
+            <div class="swiper-container swiper-small center">
+              <div class="swiper-wrapper">
+                <a href="#" class="swiper-slide swiper-small--container db color-inherit link dim">
+                  <img options="size=120x130&bgcolor=#ccc&color=#f0f0f0&text=Product 1"
+                    class="mb-10 db small-slider-pic placeholder">
+                  <p class="ma0 tc small-slider-text">
+                    <b class="ttu small-slider-text-brand">Vince</b><br>
+                    <span class="ttl small-slider-discount">Скидка 70%</span>
+                  </p>
+                </a>
+                <a href="#" class="swiper-slide swiper-small--container db color-inherit link dim">
+                  <img options="size=120x130&bgcolor=#ccc&color=#f0f0f0&text=Product 2"
+                    class="mb-10 db small-slider-pic placeholder">
+                  <p class="ma0 tc small-slider-text">
+                    <b class="ttu small-slider-text-brand">Vince</b><br>
+                    <span class="ttl small-slider-discount">Скидка 70%</span>
+                  </p>
+                </a>
+                <a href="#" class="swiper-slide swiper-small--container db color-inherit link dim">
+                  <img options="size=120x130&bgcolor=#ccc&color=#f0f0f0&text=Product 3"
+                    class="mb-10 db small-slider-pic placeholder">
+                  <p class="ma0 tc small-slider-text">
+                    <b class="ttu small-slider-text-brand">Vince</b><br>
+                    <span class="ttl small-slider-discount">Скидка 70%</span>
+                  </p>
+                </a>
+                <a href="#" class="swiper-slide swiper-small--container db color-inherit link dim">
+                  <img options="size=120x130&bgcolor=#ccc&color=#f0f0f0&text=Product 4"
+                    class="mb-10 db small-slider-pic placeholder">
+                  <p class="ma0 tc small-slider-text">
+                    <b class="ttu small-slider-text-brand">Vince</b><br>
+                    <span class="ttl small-slider-discount">Скидка 70%</span>
+                  </p>
+                </a>
+                <a href="#" class="swiper-slide swiper-small--container db color-inherit link dim">
+                  <img options="size=120x130&bgcolor=#ccc&color=#f0f0f0&text=Product 5"
+                    class="mb-10 db small-slider-pic placeholder">
+                  <p class="ma0 tc small-slider-text">
+                    <b class="ttu small-slider-text-brand">Vince</b><br>
+                    <span class="ttl small-slider-discount">Скидка 70%</span>
+                  </p>
+                </a>
+                <a href="#" class="swiper-slide swiper-small--container db color-inherit link dim">
+                  <img options="size=120x130&bgcolor=#ccc&color=#f0f0f0&text=Product 6"
+                    class="mb-10 db small-slider-pic placeholder">
+                  <p class="ma0 tc small-slider-text">
+                    <b class="ttu small-slider-text-brand">Vince</b><br>
+                    <span class="ttl small-slider-discount">Скидка 70%</span>
+                  </p>
+                </a>
+                <a href="#" class="swiper-slide swiper-small--container db color-inherit link dim">
+                  <img options="size=120x130&bgcolor=#ccc&color=#f0f0f0&text=Product 7"
+                    class="mb-10 db small-slider-pic placeholder">
+                  <p class="ma0 tc small-slider-text">
+                    <b class="ttu small-slider-text-brand">Vince</b><br>
+                    <span class="ttl small-slider-discount">Скидка 70%</span>
+                  </p>
+                </a>
+                <a href="#" class="swiper-slide swiper-small--container db color-inherit link dim">
+                  <img options="size=120x130&bgcolor=#ccc&color=#f0f0f0&text=Product 8"
+                    class="mb-10 db small-slider-pic placeholder">
+                  <p class="ma0 tc small-slider-text">
+                    <b class="ttu small-slider-text-brand">Vince</b><br>
+                    <span class="ttl small-slider-discount">Скидка 70%</span>
+                  </p>
+                </a>
+                <a href="#" class="swiper-slide swiper-small--container db color-inherit link dim">
+                  <img options="size=120x130&bgcolor=#ccc&color=#f0f0f0&text=Product 9"
+                    class="mb-10 db small-slider-pic placeholder">
+                  <p class="ma0 tc small-slider-text">
+                    <b class="ttu small-slider-text-brand">Vince</b><br>
+                    <span class="ttl small-slider-discount">Скидка 70%</span>
+                  </p>
+                </a>
+              </div>
+              <div class="swiper-button-prev swiper-small-prev"></div>
+              <div class="swiper-button-next swiper-small-next"></div>
+            </div>
+            <script>
+              var swiperSmall = new Swiper('.swiper-small', {
+                //loop: true,
+                slidesPerView: 3,
+                spaceBetween: 20,
+                navigation: {
+                  nextEl: '.swiper-small-next',
+                  prevEl: '.swiper-small-prev',
+                },
+              });
+            </script>
+          </div>
+        </section>
+      </div><!-- component end -->
+      <div class="component">
+        <div class="absolute">
+          <hr class="bn b--black -bt-ns sticky top-0" data-text="main-content">
+        </div>
+        <section id="main-content" class="pv5 outline">
+          <style>
+            .main-content .first .cover {
+              max-height: 340px;
+            }
+
+            .main-content .first .link-text {
+              font: 400 22px/22px 'Helvetica', Arial, sans-serif;
+            }
+
+            .main-content .tags {
+              font: 400 12px/14px 'Helvetica', Arial, sans-serif;
+            }
+
+            .square {
+              max-width: 205px;
+            }
+
+            .main-content .square .link-text {
+              font: 400 16px/19px 'Helvetica', Arial, sans-serif;
+              max-height: 100px;
+            }
+
+            .main-content .regular {
+              max-width: 435px;
+            }
+
+            .main-content .regular .cover {
+              max-height: 205px;
+            }
+
+            .main-content .regular .link-text {
+              font: 400 22px/26px 'Helvetica', Arial, sans-serif;
+              max-height: 105px;
+            }
+
+            /* выходим на атомарный уровень */
+            .mr-30 {
+              margin-right: 30px;
+            }
+
+            .mb-60 {
+              margin-bottom: 60px;
+            }
+
+            .mb-20 {
+              margin-bottom: 20px;
+            }
+
+            .mb-10 {
+              margin-bottom: 10px;
+            }
+
+            .section-square {
+              max-width: 205px;
+            }
+
+            .section-regular {
+              max-width: 435px;
+            }
+
+            .section-square article,
+            .section-regular article {
+              height: 330px;
+            }
+          </style>
+          <div class="center" style="max-width: 700px">
+            <div class="flex flex-wrap main-content">
+              <article class="mb-60 mr-30 first">
+                <a class="db mb-20 overflow-hidden cover" href="#"
+                  title="Белый тотал-лук + неоновый макияж: как повторить образ">
+                  <img class="db" src="https://www.buro247.ru/thumb/670x340/images/670-340-Blanc-on-Blanc1163-copy.jpg"
+                    alt="Белый тотал-лук + неоновый макияж: как повторить образ"
+                    title="Белый тотал-лук + неоновый макияж: как повторить образ">
+                </a>
+                <div class="ttu mb-10 tags">
+                  <a class="dib no-underline black tag" href="#" title="Мода">
+                    Мода </a>
+                  <span class="dib">|</span>
+                  <a class="dib no-underline black tag" href="#" title="Коллекции">
+                    Коллекции </a>
+                </div>
+                <a class="dib no-underline black" href="#" class="db">
+                  <h4 class="ma0 link-text">Белый
+                    тотал-лук + неоновый макияж: как повторить образ</h4>
+                </a>
+              </article>
+              <section class="flex flex-wrap mr-30 section-square">
+                <article class="mb-60 square">
+                  <a class="db mb-20 cover" href="#">
+                    <img class="db lazy"
+                      data-original="https://www.buro247.ru/thumb/205x205/images/andreeva/300-300-285776.jpg"
+                      src="https://www.buro247.ru/thumb/205x205/images/andreeva/300-300-285776.jpg"
+                      alt="Инициативы в области гендерного равенства, в которых можно принять участие">
+                  </a>
+                  <div class="ttu mb-10 tags">
+                    <a class="dib no-underline black tag" href="#">#buronewera</a>
+                  </div>
+                  <a class="db no-underline black" href="#">
+                    <h4 class="ma0 overflow-hidden link-text">Инициативы
+                      в области гендерного равенства, в которых можно
+                      принять участие</h4>
+                  </a>
+                </article>
+                <article class="mb-60 square">
+                  <a class="db mb-20 cover" href="#">
+                    <img class="db lazy"
+                      data-original="https://www.buro247.ru/thumb/205x205/images/andreeva/300-300-Kors-bag-S19-030.jpg"
+                      src="https://www.buro247.ru/thumb/205x205/images/andreeva/300-300-Kors-bag-S19-030.jpg"
+                      alt="Инициативы в области гендерного равенства, в которых можно принять участие">
+                  </a>
+                  <div class="ttu mb-10 tags">
+                    <a class="dib no-underline black tag" href="#">Индустрия</a>
+                  </div>
+                  <a class="db no-underline black" href="#">
+                    <h4 class="ma0 overflow-hidden link-text">7 художников, работы которых мы нашли в весенне-летних
+                      коллекциях
+                      2019</h4>
+                  </a>
+                </article>
+                <article class="mb-60 square">
+                  <a class="db mb-20 cover" href="#">
+                    <img class="db lazy"
+                      data-original="https://www.buro247.ru/thumb/205x205/images/andreeva/300-300-books-Untitled-2.jpg"
+                      src="https://www.buro247.ru/thumb/205x205/images/andreeva/300-300-books-Untitled-2.jpg"
+                      alt="Инициативы в области гендерного равенства, в которых можно принять участие">
+                  </a>
+                  <div class="ttu mb-10 tags">
+                    <a class="dib no-underline black tag" href="#">Индустрия</a>
+                  </div>
+                  <a class="db no-underline black" href="#">
+                    <h4 class="ma0 overflow-hidden link-text">7 худших книг о саморазвитии</h4>
+                  </a>
+                </article>
+              </section>
+              <section class="flex flex-wrap mr-30 section-regular">
+                <article class="mb-60 regular">
+                  <a class="db mb-20 overflow-hidden cover" href="#">
+                    <img class="db lazy "
+                      data-original="https://www.buro247.ru/thumb/435x205/images/andreeva/670-340-GettyImages-165314428.jpg"
+                      src="https://www.buro247.ru/thumb/435x205/images/andreeva/670-340-GettyImages-165314428.jpg"
+                      alt="60 лет главному редактору The New Yorker. Как у него получается сохранять уникальность журнала">
+                  </a>
+                  <div class="ttu mb-10 tags">
+                    <a class="dib no-underline black tag" href="#">Жизнь</a>
+                    <span class="dib">|</span>
+                    <a class="dib no-underline black tag" href="#">Общество</a>
+                  </div>
+                  <a class="db no-underline black" href="#">
+                    <h4 class="ma0 overflow-hidden link-text">60
+                      лет главному редактору The New Yorker. Как у него получается сохранять уникальность журнала</h4>
+                  </a>
+                </article>
+                <article class="mb-60 regular">
+                  <a class="db mb-20 overflow-hidden cover" href="#">
+                    <img class="db lazy "
+                      data-original="https://www.buro247.ru/thumb/435x205/images/andreeva/670-340-Snimok_ekrana_2018-10-25_v_16.15.47_tYXlcLW.width-1280.jpg"
+                      src="https://www.buro247.ru/thumb/435x205/images/andreeva/670-340-Snimok_ekrana_2018-10-25_v_16.15.47_tYXlcLW.width-1280.jpg"
+                      alt="60 лет главному редактору The New Yorker. Как у него получается сохранять уникальность журнала">
+                  </a>
+                  <div class="ttu mb-10 tags">
+                    <a class="dib no-underline black tag" href="#">Жизнь</a>
+                    <span class="dib">|</span>
+                    <a class="dib no-underline black tag" href="#">Общество</a>
+                  </div>
+                  <a class="db no-underline black" href="#">
+                    <h4 class="ma0 overflow-hidden link-text">Наташа Меркулова и Алексей Чупов: «Мы сначала старались
+                      держаться
+                      подальше от Евгения Цыганова»</h4>
+                  </a>
+                </article>
+                <article class="mb-60 regular">
+                  <a class="db mb-20 overflow-hidden cover" href="#">
+                    <img class="db lazy "
+                      data-original="https://www.buro247.ru/thumb/435x205/images/andreeva/670-340-charmed.jpg"
+                      src="https://www.buro247.ru/thumb/435x205/images/andreeva/670-340-charmed.jpg"
+                      alt="60 лет главному редактору The New Yorker. Как у него получается сохранять уникальность журнала">
+                  </a>
+                  <div class="ttu mb-10 tags">
+                    <a class="dib no-underline black tag" href="#">Жизнь</a>
+                    <span class="dib">|</span>
+                    <a class="dib no-underline black tag" href="#">Общество</a>
+                  </div>
+                  <a class="db no-underline black" href="#">
+                    <h4 class="ma0 overflow-hidden link-text">Баффи, Сабрина и Зачарованные возвращаются: зачем они нам
+                      в
+                      2018-м</h4>
+                  </a>
+                </article>
+              </section>
+            </div>
+          </div>
+        </section>
+      </div><!-- component end -->
+      <div class="component">
+        <div class="absolute">
+          <hr class="bn b--black -bt-ns sticky top-0" data-text="section-three">
+        </div>
+        <section id="section-three" class="pv5 outline">
+          <style>
+            .section-three .tags {
+              font: 400 12px/14px 'Helvetica', Arial, sans-serif;
+            }
+
+            .section-three .regular .link-text {
+              font: 400 22px/26px 'Helvetica', Arial, sans-serif;
+            }
+
+            .circle {
+              border-radius: 50%;
+            }
+          </style>
+          <div class="mw-1000 center">
+            <div class="flex flex-wrap justify-between section-three">
+              <article class="w-30 mb-60 regular">
+                <a class="db mb-20 overflow-hidden cover circle" href="#">
+                  <img class="db"
+                    src="https://www.buro247.ru/thumb/300x300/images/andreeva/670-3400-large.HbYurlMl14rJUYL7aPB-7Z7oeoGr-xexJ53AjSYtjB4.jpg"
+                    alt="Wyclef Jean и Никола Мельников представят совместный перформанс в Галерее Гари Татинцяна"
+                    title="Wyclef Jean и Никола Мельников представят совместный перформанс в Галерее Гари Татинцяна">
+                </a>
+                <div class="ttu mb-10 tags">
+                  <a class="dib no-underline black tag" href="#">Жизнь</a>
+                  <span class="dib">|</span>
+                  <a class="dib no-underline black tag" href="#">Общество</a>
+                </div>
+                <a class="db no-underline black" href="#">
+                  <h4 class="ma0 overflow-hidden link-text">Wyclef Jean и Никола Мельников представят совместный
+                    перформанс в
+                    Галерее Гари Татинцяна</h4>
+                </a>
+              </article>
+              <article class="w-30 mb-60 regular">
+                <a class="db mb-20 overflow-hidden cover circle" href="#">
+                  <img class="db" src="https://www.buro247.ru/thumb/300x300/images/jsjqqqdkkq.jpg"
+                    alt="Wyclef Jean и Никола Мельников представят совместный перформанс в Галерее Гари Татинцяна"
+                    title="Wyclef Jean и Никола Мельников представят совместный перформанс в Галерее Гари Татинцяна">
+                </a>
+                <div class="ttu mb-10 tags">
+                  <a class="dib no-underline black tag" href="#">Жизнь</a>
+                  <span class="dib">|</span>
+                  <a class="dib no-underline black tag" href="#">Общество</a>
+                </div>
+                <a class="db no-underline black" href="#">
+                  <h4 class="ma0 overflow-hidden link-text">Как прошла презентация благотворительного сет-меню в
+                    ресторане
+                    Choice. Healthy Social Club</h4>
+                </a>
+              </article>
+              <article class="w-30 mb-60 regular">
+                <a class="db mb-20 overflow-hidden cover circle" href="#">
+                  <img class="db"
+                    src="https://www.buro247.ru/thumb/300x300/images/andreeva/300-300-2018-10-31-10.54.02.png"
+                    alt="Wyclef Jean и Никола Мельников представят совместный перформанс в Галерее Гари Татинцяна"
+                    title="Wyclef Jean и Никола Мельников представят совместный перформанс в Галерее Гари Татинцяна">
+                </a>
+                <div class="ttu mb-10 tags">
+                  <a class="dib no-underline black tag" href="#">Жизнь</a>
+                  <span class="dib">|</span>
+                  <a class="dib no-underline black tag" href="#">Общество</a>
+                </div>
+                <a class="db no-underline black" href="#">
+                  <h4 class="ma0 overflow-hidden link-text">Средства для восстановления липидного барьера кожи</h4>
+                </a>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div><!-- component end -->
+      <div class="component">
+        <div class="absolute">
+          <hr class="bn b--black -bt-ns sticky top-0" data-text="section-rects">
+        </div>
+        <section id="section-rects" class="pv5 outline">
+          <style>
+            .section-rects .tags {
+              font: 400 12px/14px 'Helvetica', Arial, sans-serif;
+            }
+
+            .section-rects .regular .link-text {
+              font: 400 22px/26px 'Helvetica', Arial, sans-serif;
+            }
+
+            .mw-485 {
+              max-width: 485px;
+            }
+          </style>
+          <div class="mw-1000 center">
+            <div class="flex flex-wrap justify-between section-rects">
+              <article class="mw-485 mb-60 regular">
+                <a class="db mb-20 overflow-hidden cover" href="#">
+                  <img class="db" src="https://www.buro247.ru/thumb/485x250/images/andreeva/670-3-3-3Untitled-2.png"
+                    alt="Wyclef Jean и Никола Мельников представят совместный перформанс в Галерее Гари Татинцяна"
+                    title="Wyclef Jean и Никола Мельников представят совместный перформанс в Галерее Гари Татинцяна">
+                </a>
+                <div class="ttu mb-10 tags">
+                  <a class="dib no-underline black tag" href="#">Жизнь</a>
+                  <span class="dib">|</span>
+                  <a class="dib no-underline black tag" href="#">Общество</a>
+                </div>
+                <a class="db no-underline black" href="#">
+                  <h4 class="ma0 overflow-hidden link-text">Wyclef Jean и Никола Мельников представят совместный
+                    перформанс в
+                    Галерее Гари Татинцяна</h4>
+                </a>
+              </article>
+              <article class="mw-485 mb-60 regular">
+                <a class="db mb-20 overflow-hidden cover" href="#">
+                  <img class="db" src="https://www.buro247.ru/thumb/485x250/images/krgjkerg.jpg"
+                    alt="Wyclef Jean и Никола Мельников представят совместный перформанс в Галерее Гари Татинцяна"
+                    title="Wyclef Jean и Никола Мельников представят совместный перформанс в Галерее Гари Татинцяна">
+                </a>
+                <div class="ttu mb-10 tags">
+                  <a class="dib no-underline black tag" href="#">Жизнь</a>
+                  <span class="dib">|</span>
+                  <a class="dib no-underline black tag" href="#">Общество</a>
+                </div>
+                <a class="db no-underline black" href="#">
+                  <h4 class="ma0 overflow-hidden link-text">Как прошла презентация благотворительного сет-меню в
+                    ресторане
+                    Choice. Healthy Social Club</h4>
+                </a>
+              </article>
+              <article class="mw-485 mb-60 regular">
+                <a class="db mb-20 overflow-hidden cover" href="#">
+                  <img class="db"
+                    src="https://www.buro247.ru/thumb/485x250/images/andreeva/670-340-2018-11-09-18.20.38.jpg"
+                    alt="Wyclef Jean и Никола Мельников представят совместный перформанс в Галерее Гари Татинцяна"
+                    title="Wyclef Jean и Никола Мельников представят совместный перформанс в Галерее Гари Татинцяна">
+                </a>
+                <div class="ttu mb-10 tags">
+                  <a class="dib no-underline black tag" href="#">Жизнь</a>
+                  <span class="dib">|</span>
+                  <a class="dib no-underline black tag" href="#">Общество</a>
+                </div>
+                <a class="db no-underline black" href="#">
+                  <h4 class="ma0 overflow-hidden link-text">Средства для восстановления липидного барьера кожи</h4>
+                </a>
+              </article>
+              <article class="mw-485 mb-60 regular">
+                <a class="db mb-20 overflow-hidden cover" href="#">
+                  <img class="db"
+                    src="https://www.buro247.ru/thumb/485x250/images/andreeva/670-340-2018-11-09-18.20.38.jpg"
+                    alt="Wyclef Jean и Никола Мельников представят совместный перформанс в Галерее Гари Татинцяна"
+                    title="Wyclef Jean и Никола Мельников представят совместный перформанс в Галерее Гари Татинцяна">
+                </a>
+                <div class="ttu mb-10 tags">
+                  <a class="dib no-underline black tag" href="#">Жизнь</a>
+                  <span class="dib">|</span>
+                  <a class="dib no-underline black tag" href="#">Общество</a>
+                </div>
+                <a class="db no-underline black" href="#">
+                  <h4 class="ma0 overflow-hidden link-text">Средства для восстановления липидного барьера кожи</h4>
+                </a>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div><!-- component end -->
+
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+        <symbol id="logo-buro" fill="#231F20">
+          <path
+            d="M42.42 15.35c0 3.22-.55 5.37-1.63 6.5-1.08 1.13-2.91 1.7-5.46 1.7a7.8 7.8 0 0 1-3.8-.85 4.77 4.77 0 0 1-2.18-2.42c-.43-1.06-.64-2.7-.64-4.91V.6h-3.48v14.77c0 2.7.34 4.85 1 6.41a7.2 7.2 0 0 0 3.35 3.59c1.57.82 3.59 1.23 6.05 1.23 2.53 0 4.57-.47 6.14-1.41a7.6 7.6 0 0 0 3.24-3.69c.6-1.52.9-3.55.9-6.11V.6h-3.49v14.74zM10.14 26.45c1.7 0 3.13-.15 4.3-.43a8.23 8.23 0 0 0 2.91-1.28 6.7 6.7 0 0 0 1.96-2.41 7.5 7.5 0 0 0 .78-3.38 6.1 6.1 0 0 0-1.3-3.91 7 7 0 0 0-3.7-2.35 6.54 6.54 0 0 0 2.8-2.37c.62-.98.91-2.02.91-3.12a6.2 6.2 0 0 0-1.03-3.4 6.22 6.22 0 0 0-2.89-2.42A12.71 12.71 0 0 0 10 .6H0v25.85h10.14zM3.52 3.66h5.32c1.91 0 3.26.12 4.04.36.79.23 1.4.68 1.8 1.34.44.65.65 1.4.65 2.26 0 .9-.23 1.65-.69 2.26a3.83 3.83 0 0 1-2.02 1.3c-.69.19-1.8.29-3.37.29H3.52V3.66zm0 10.86h6.15c1.69 0 2.99.15 3.9.43a4.02 4.02 0 0 1 2.87 4.02c0 .81-.18 1.54-.54 2.17-.35.62-.8 1.1-1.34 1.44-.55.33-1.22.57-2.03.7-.46.09-1.26.12-2.4.12h-6.6v-8.88zM55.57 11.96V3.41h8.41c1.97 0 3.4.38 4.33 1.17a3.78 3.78 0 0 1 1.36 3.02c0 .83-.24 1.6-.71 2.32a3.9 3.9 0 0 1-2.08 1.55c-.9.33-2.16.49-3.77.49h-7.54zm20.7 14.41L65.31 14.7l.52-.05c2.55-.34 4.44-1.14 5.66-2.4a6.44 6.44 0 0 0 1.83-4.63c0-1.43-.37-2.73-1.1-3.9a5.82 5.82 0 0 0-2.97-2.46c-1.23-.46-3.03-.7-5.4-.7H52.06v25.86h3.53V14.94h5.52l10.88 11.43h4.28zM99.36 20.77a9.83 9.83 0 0 1-7.2 3.05 9.72 9.72 0 0 1-6.99-2.86 9.96 9.96 0 0 1-3.1-7.42 9.92 9.92 0 0 1 2.85-7.3 9.73 9.73 0 0 1 7.15-3.04 9.67 9.67 0 0 1 7.2 2.9 10.08 10.08 0 0 1 2.97 7.3 10.2 10.2 0 0 1-2.88 7.37zm2.26-16.89A13.86 13.86 0 0 0 91.7 0c-3.72.03-6.56 1.4-9.18 4.05a12.8 12.8 0 0 0-3.9 9.47c.04 4.15 1.55 7.54 4.48 10.07a13.42 13.42 0 0 0 9.04 3.4c3.77-.04 7-1.39 9.64-4.02a12.84 12.84 0 0 0 3.9-9.57c-.03-3.7-1.4-6.9-4.06-9.52zM112.25 26.94a1.75 1.75 0 0 0 0-3.51 1.75 1.75 0 0 0 0 3.51z" />
+        </symbol>
+        <symbol id="menu" viewBox="0 0 35 21">
+          <path stroke="#000" d="M0 .5h35M0 10.5h35M0 20.5h35" />
+        </symbol>
+      </svg>
+    </main>
+  </div>
+
+  <script src="js/placeholder.min.js"></script>
+</body>
+
+</html>
